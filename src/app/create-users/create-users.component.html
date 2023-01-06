@@ -1,0 +1,35 @@
+
+<form class="form" [formGroup]="createUserForm" (ngSubmit)="save()">
+  <mat-form-field class="full-width">
+    <mat-label>Name</mat-label>
+    <input type="text" matInput formControlName="nameFormControl" [errorStateMatcher]="matcher"
+           placeholder="Ex. John">
+    <mat-hint>Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="createUserForm.controls.nameFormControl.hasError('required')">
+      Name is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="emailFormControl" [errorStateMatcher]="matcher"
+             placeholder="Ex. pat@example.com">
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <mat-error *ngIf="createUserForm.controls.emailFormControl.hasError('email') && !createUserForm.controls.emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="createUserForm.controls.emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Phone Number</mat-label>
+      <input type="number" matInput formControlName="phoneNumberFormControl" [errorStateMatcher]="matcher"
+             placeholder="Ex. 0899122">
+      <mat-hint>Errors appear instantly!</mat-hint>
+      <mat-error *ngIf="createUserForm.controls.phoneNumberFormControl.hasError('required')">
+        Phone Number is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="button" type="submit" [disabled]="!createUserForm.valid">Create</button>
+  </form>
+  
