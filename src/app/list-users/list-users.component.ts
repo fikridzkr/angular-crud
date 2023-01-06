@@ -1,11 +1,6 @@
 import {Component} from '@angular/core';
+import { ELEMENT_DATA } from '../helpers/elementData';
 import { UserModel } from '../models/user.model';
-
-
-
-const ELEMENT_DATA: UserModel[] = [
-  {name: 'Hydrogen', email: 'mantap@mantap.com', phoneNumber: '0899123456'},
-];
 
 @Component({
   selector: 'app-list-users',
@@ -15,4 +10,8 @@ const ELEMENT_DATA: UserModel[] = [
 export class ListUsersComponent {
   displayedColumns: string[] = ['name', 'email', 'phoneNumber', 'actions'];
   dataSource = ELEMENT_DATA;
+
+  delete(){
+    
+  }
 }
