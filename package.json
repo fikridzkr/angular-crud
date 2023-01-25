@@ -7,7 +7,8 @@
     "build:prod": "ng build --configuration production",
     "build:staging": "ng build  --configuration=staging",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "json-server": "json-server --watch data.json --port 8000 "
   },
   "private": true,
   "dependencies": {

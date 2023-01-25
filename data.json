@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "email": "typicode",
+      "phoneNumber": "json-server"
+    },
+    {
+      "id": 2,
+      "name": "json-server2",
+      "email": "typicode2",
+      "phoneNumber": "json-server2"
+    },
+    {
+      "id": 3,
+      "name": "json-server3",
+      "email": "typicode3",
+      "phoneNumber": "json-server3"
+    },
+    {
+      "id": 1674553193846,
+      "name": "fikri",
+      "email": "opa@gmai.com",
+      "phoneNumber": 5555
+    },
+    {
+      "id": 1674553243594,
+      "name": "ddsfdsf",
+      "email": "pat@ss.com",
+      "phoneNumber": 213123123
+    }
+  ]
+}
